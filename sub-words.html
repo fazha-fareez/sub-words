@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Word Game</title>
+	<link rel="stylesheet" type="text/css" href="sub-words.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+	
+<style>
+</style>
+
+<body>
+	<section>
+	<form id="game" name="game">
+		<div class = "timerTitle"> Timer: </div> <div id = "timer"> </div>
+		<div id = "result"> </div>
+		<div id="button"> 
+			<span id="startButton" onclick="startGame()"> START </span> 
+			<span id="quitButton" class="hidden" onclick="quitGame()"> QUIT </span>
+			<span id="resetButton" class="hidden" onclick="resetGame()"> RESET </span>
+		</div>
+		<section class = "onScreen">
+			<section id = "instruction">
+				<p> Instructions: <br>
+					When START is pressed, random characters will be generated. <br>
+					Make as many words as you can before time runs out! <br>
+					Press QUIT if you can't think of anymore words! <br>
+					Press RESET if you want to start over!
+				</p>
+			</section>
+			<section id = "playing" class="hidden">
+				<div id = "outputString"> </div>
+				<div class="inputSection">
+					<div id = "invalid" class = "hidden"> Invalid Word </div>
+					Word: <input type="text" autocomplete="off" id="inputStr" name="inputStr" onkeypress="enterInput(event, 0)"/>
+					<span id = "enterButton" onclick="enterInput(event, 1)"> ENTER </span>
+				</div>
+			</section>
+		</section>
+	</form>
+		<div id = "inputText"> </div>
+	</section>
+
+</body>
+
+<script type="text/javascript" src="sub-words.js"></script>
+
+</html>

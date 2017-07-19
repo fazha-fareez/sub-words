@@ -1,0 +1,88 @@
+body {
+	background-color: grey;
+}
+section {
+	margin: 0 auto;
+	text-align: center;
+	font-size: 60px;
+	width: 980px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+form {
+	margin-top: 10%;
+}
+#instruction {
+	font-size: 25px !important;
+}
+#startButton {
+	padding: 8px;
+	margin-top: 20px;
+	border-radius: 25px;
+	background-color: rgb(40,189,152);
+	border-style: solid;
+	border-color: rgb(40,189,152);
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+.hidden {
+	display: none;
+}
+.disable {
+	cursor: not-allowed !important;
+	opacity: 0.6;
+}
+#quitButton, #resetButton {
+	padding: 8px;
+	margin-top: 20px;
+	border-radius: 25px;
+	background-color: rgb(211,77,77) !important;
+	border-style: solid;
+	border-color: rgb(211,77,77) !important;
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+#quitButton {
+	margin-right: 30px;
+}
+#enterButton {
+	padding: 8px;
+	border-radius: 25px;
+	background-color: rgb(40,189,152);
+	border-style: solid;
+	border-color: rgb(40,189,152);
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s;
+	transition-duration: 0.4s;
+}
+#startButton:hover, #quitButton:hover, #resetButton:hover, #enterButton:hover {
+	opacity: 0.6;
+}
+.inputSection {
+	margin-top: 100px;
+}
+#outputString {
+	margin-top: 20px;
+}
+#invalid {
+	font-size: 30px;
+	color: rgb(163,32,32);
+}
+#inputStr {
+	height: 30px;
+	font-size: 30px;
+}
+#inputText {
+	font-size: 35px;
+	text-align: left;
+}
+.timerTitle {
+	text-align: right;
+}
+#timer {
+	text-align: right;
+}
+#result {
+	text-align: right;
+}
