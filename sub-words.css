@@ -11,7 +11,19 @@ section {
 form {
 	margin-top: 2%;
 }
+.green {
+	color: rgb(40,167,152);
+}
+.red {
+	color: rgb(185,77,77);
+}
 #instruction {
+	font-style: bold;
+	border-style: inset;
+	margin-top: 29px;
+}
+#i-content {
+	line-height: 140%;
 	font-size: 25px !important;
 }
 #startButton {
@@ -20,7 +32,7 @@ form {
 	border-radius: 25px;
 	background-color: rgb(40,189,152);
 	border-style: solid;
-	border-color: rgb(40,189,152);
+	border-color: rgb(40,167,152);
 	cursor: pointer;
 	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
@@ -38,7 +50,7 @@ form {
 	border-radius: 25px;
 	background-color: rgb(211,77,77) !important;
 	border-style: solid;
-	border-color: rgb(211,77,77) !important;
+	border-color: rgb(185,77,77) !important;
 	cursor: pointer;
 	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
@@ -51,7 +63,7 @@ form {
 	border-radius: 25px;
 	background-color: rgb(40,189,152);
 	border-style: solid;
-	border-color: rgb(40,189,152);
+	border-color: rgb(40,167,152);
 	cursor: pointer;
 	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
