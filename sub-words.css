@@ -9,7 +9,7 @@ section {
 	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 form {
-	margin-top: 10%;
+	margin-top: 2%;
 }
 #instruction {
 	font-size: 25px !important;
@@ -60,7 +60,7 @@ form {
 	opacity: 0.6;
 }
 .inputSection {
-	margin-top: 100px;
+	margin-top: 20px;
 }
 #outputString {
 	margin-top: 20px;
@@ -70,11 +70,11 @@ form {
 	color: rgb(163,32,32);
 }
 #inputStr {
-	height: 30px;
+	height: 34px;
 	font-size: 30px;
 }
 #inputText {
-	font-size: 35px;
+	font-size: 37px;
 	text-align: left;
 }
 .timerTitle {
