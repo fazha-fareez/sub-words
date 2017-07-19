@@ -12,12 +12,13 @@ var allInput =[0];
 
 function startGame(){
 
-	$("#quitButton").removeClass("hidden");
-	$("#resetButton").removeClass("hidden");
-	$("#startButton").addClass("hidden");
-	$("#instruction").addClass("hidden");
-	$("#playing").removeClass("hidden");
+	$("#quitButton").show();
+	$("#resetButton").show();
+	$("#startButton").hide();
+	$("#instruction").hide();
+	$("#playing").show();
 
+	document.getElementById('inputStr').focus();
 	score = 0;
 	length = randomInteger(4,6);
 	document.getElementById("outputString").innerHTML = " ";
@@ -88,7 +89,7 @@ function checkInput() {
 	var inputLen = input.length;
 //	document.getElementById("inputText").innerHTML = "";
 	if (inputLen > (length * 2)) {
-		$("#invalid").removeClass("hidden");
+		$("#invalid").show();
 	}
 	else if(checkExistingWord(input, allInput) === false){
 		var outputStr_arr = count_char(outputString, (length*2));
@@ -103,20 +104,20 @@ function checkInput() {
 		if (match == true) {
 			$.getJSON("https://api.pearson.com/v2/dictionaries/lasde/entries?headword=" + input + "&apikey=XHGACCNFuBLwBqsZcjZb7bafw9Vhklfa", function(data) {
 				if (data.count > 0){
-					$("#invalid").addClass("hidden");
+					$("#invalid").hide();
 					score += 1;
 					allInput.push(input);
 					var inputList = '<span style="margin-right: 20px;">' + input + '</span>';
 					document.getElementById("inputText").innerHTML += inputList;
 				}
 				else {
-					$("#invalid").removeClass("hidden");
+					$("#invalid").show();
 				}
 			})
 		//	displayInput(input);
 		}
 		else {
-			$("#invalid").removeClass("hidden");
+			$("#invalid").show();
 		}
 	}
 } 
@@ -132,7 +133,7 @@ function enterInput(e, n) {
 }
 
 function quitGame() {
-	$("#quitButton").addClass("hidden");
+	$("#quitButton").hide();
 	clearInterval(x);
 	document.getElementById("result").innerHTML = "Score: " + score;
 	document.getElementById("inputStr").disabled = true;
@@ -140,8 +141,8 @@ function quitGame() {
 }
 
 function resetGame() {
-	$("#quitButton").addClass("hidden");
-	$("#startButton").removeClass("hidden");
+	$("#quitButton").hide();
+	$("#startButton").show();
 	clearInterval(x);
 	window.location.reload();
 }
