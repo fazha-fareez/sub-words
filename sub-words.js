@@ -146,3 +146,4 @@ function resetGame() {
 	clearInterval(x);
 	window.location.reload();
 }
+
