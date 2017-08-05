@@ -89,7 +89,7 @@ function checkInput() {
 	var inputLen = input.length;
 //	document.getElementById("inputText").innerHTML = "";
 	if (inputLen > (length * 2)) {
-		$("#invalid").show();
+		$('#invalid').delay(1000).show().fadeOut('slow');
 	}
 	else if(checkExistingWord(input, allInput) === false){
 		var outputStr_arr = count_char(outputString, (length*2));
@@ -104,10 +104,9 @@ function checkInput() {
 		if (match == true) {
 			$.getJSON("https://api.pearson.com/v2/dictionaries/lasde/entries?headword=" + input + "&apikey=XHGACCNFuBLwBqsZcjZb7bafw9Vhklfa", function(data) {
 				if (data.count > 0){
-					$("#invalid").hide();
 					score += 1;
 					allInput.push(input);
-					var inputList = '<span style="margin-right: 20px;">' + input + '</span>';
+					var inputList = '<span style="margin-right: 20px; font-size: 30px">' + input + '</span>';
 					document.getElementById("inputText").innerHTML += inputList;
 				}
 				else {
@@ -117,7 +116,7 @@ function checkInput() {
 		//	displayInput(input);
 		}
 		else {
-			$("#invalid").show();
+			$('#invalid').delay(1000).show().fadeOut('slow');
 		}
 	}
 } 
