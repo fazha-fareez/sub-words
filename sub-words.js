@@ -17,6 +17,7 @@ function startGame(){
 	$("#startButton").hide();
 	$("#instruction").hide();
 	$("#playing").show();
+	$("#timerTitle").show();
 
 	document.getElementById('inputStr').focus();
 	score = 0;
