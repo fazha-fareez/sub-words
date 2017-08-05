@@ -89,7 +89,7 @@ form {
 	font-size: 37px;
 	text-align: left;
 }
-.timerTitle {
+#timerTitle {
 	text-align: right;
 }
 #timer {
