@@ -52,9 +52,8 @@ function startGame(){
 		var seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
 		document.getElementById("timer").innerHTML = seconds + "s";
 		if (timeDifference < 0) {
-			clearInterval(x);
 			document.getElementById("timer").innerHTML = "TIME UP";
-			document.getElementById("result").innerHTML = "Score: " + score;
+			quitGame();
 		}
 	}, 1000)
 }
