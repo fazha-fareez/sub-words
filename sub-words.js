@@ -1,6 +1,3 @@
-function randomInteger(min, max) {
-	return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 var vowels = ["a", "e", "i", "o", "u"];
 var consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"];
 var length;
@@ -9,9 +6,11 @@ var score;
 var x;
 var allInput =[0];
  
+function randomInteger(min, max) {
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 function startGame(){
-
 	$("#quitButton").show();
 	$("#resetButton").show();
 	$("#startButton").hide();
@@ -79,15 +78,9 @@ function count_char(str, strLen){
 	return arr;
 }
 
-/*function displayInput(input) {
-	var inputList = '<div>' + input + '</div>';
-	document.getElementById("inputText").innerHTML += inputList;
-} */
-
 function checkInput() {
 	var input = document.game.inputStr.value;
 	var inputLen = input.length;
-//	document.getElementById("inputText").innerHTML = "";
 	if (inputLen > (length * 2)) {
 		$('#invalid').delay(1000).show().fadeOut('slow');
 	}
@@ -110,7 +103,7 @@ function checkInput() {
 					document.getElementById("inputText").innerHTML += inputList;
 				}
 				else {
-					$("#invalid").show();
+					$('#invalid').delay(1000).show().fadeOut('slow');
 				}
 			})
 		//	displayInput(input);
