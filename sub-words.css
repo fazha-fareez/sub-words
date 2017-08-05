@@ -85,6 +85,11 @@ form {
 	height: 34px;
 	font-size: 30px;
 }
+#inputStr:focus {  
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238,1);
+}
 #inputText {
 	font-size: 37px;
 	text-align: left;
